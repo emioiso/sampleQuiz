@@ -60,7 +60,7 @@ class quizViewController: UIViewController {
             ansButton2.setTitle(quizArray[3], for: .normal)
             ansButton3.setTitle(quizArray[4], for: .normal)
 //            ↓消したらイスの問題のページが出力された。
-//            ansButton4.setTitle(quizArray[5], for: .normal)
+            ansButton4.setTitle(quizArray[5], for: .normal)
             
         } else {
             performSegue(withIdentifier: "toScoreVC", sender: nil)
