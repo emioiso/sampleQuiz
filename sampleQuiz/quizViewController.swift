@@ -6,9 +6,10 @@
 //
 
 import UIKit
+//以下をコメントアウト外す
+//import GoogleMobileAds
 
 class quizViewController: UIViewController {
-    
     @IBOutlet var quizNumberLabel: UILabel!
     @IBOutlet var quizTextView: UITextView!
     @IBOutlet var answerButton1: UIButton!
@@ -17,6 +18,9 @@ class quizViewController: UIViewController {
     @IBOutlet var answerButton4: UIButton!
     @IBOutlet var judgeImageView: UIImageView!
     
+    
+    //以下をコメントアウト外す
+    // var bannerView:GADBannerView!
     var csvArray: [String] = []
     var quizArray: [String] = []
     var quizCount = 0
@@ -25,14 +29,17 @@ class quizViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //以下をコメントアウト外す
+//        bannerView = GADBannerView(adSize: kGADdiSizeBanner)
+//        bannerView.adUnitID = "ca-app-pub-3940256899942544/2936735716"
+//        bannerView.rootViewController = self
+//        bannerView.load(GADRequest())
+//        addBannerViewToView = (bannerView)
         
         print("選択したのはレベル\(selectLevel)")
         
         csvArray = loadCSV(fileName: "quiz\(selectLevel)")
-//        print("🟥シャッフル前\(csvArray)")
         csvArray.shuffle()
-//        print(csvArray)
-//        print("🟩シャッフル前\(csvArray)")
         
         quizArray = csvArray[quizCount].components(separatedBy: ",")
         quizNumberLabel.text = "第\(quizCount + 1)問"
@@ -117,8 +124,26 @@ class quizViewController: UIViewController {
         }
         return csvArray
     }
-    
-    
+    //以下をコメントアウト外す
+//    func addBannerViewToView(_ bannerView: GADBannerView) {
+//        bannerView.translatesAutoresizingMaskIntoConstraints = false
+//        view.addSubview(bannerView)
+//        view.addConstraints[NSLayoutConstraint(item:bannerView,
+//                                               attriute: .bottom,
+//                                               relatedBy: .equal,
+//                                               toItem: view.safeAreaLayoutGuide,
+//                                               attribute: .bottom,
+//                                               multiplier: 1,
+//                                               constant:0),
+//                                               NSLayoutConstraint(item:barnnerView,
+//                                                                  attribute: .centerX,
+//                                                                  relatedBy: .equal,
+//                                                                  toItem: view,
+//                                                                  attribute: .centerX,
+//                                                                  multiplier: 1,
+//                                                                  constant:0)
+//                                              ])
+//    }
    
     
 
