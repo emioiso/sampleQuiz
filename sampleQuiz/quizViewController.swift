@@ -6,8 +6,7 @@
 //
 
 import UIKit
-//以下をコメントアウト外す
-//import GoogleMobileAds
+import GoogleMobileAds
 
 class quizViewController: UIViewController {
     @IBOutlet var quizNumberLabel: UILabel!
@@ -18,9 +17,7 @@ class quizViewController: UIViewController {
     @IBOutlet var answerButton4: UIButton!
     @IBOutlet var judgeImageView: UIImageView!
     
-    
-    //以下をコメントアウト外す
-    // var bannerView:GADBannerView!
+    var bannerView: GADBannerView!
     var csvArray: [String] = []
     var quizArray: [String] = []
     var quizCount = 0
@@ -29,12 +26,12 @@ class quizViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //以下をコメントアウト外す
-//        bannerView = GADBannerView(adSize: kGADdiSizeBanner)
-//        bannerView.adUnitID = "ca-app-pub-3940256899942544/2936735716"
-//        bannerView.rootViewController = self
-//        bannerView.load(GADRequest())
-//        addBannerViewToView = (bannerView)
+        
+        bannerView = GADBannerView(adSize: GADAdSizeBanner)
+        bannerView.adUnitID = "ca-app-pub-3940256899942544/2936735716"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        addBannerViewToView(bannerView)
         
         print("選択したのはレベル\(selectLevel)")
         
@@ -124,37 +121,38 @@ class quizViewController: UIViewController {
         }
         return csvArray
     }
-    //以下をコメントアウト外す
-//    func addBannerViewToView(_ bannerView: GADBannerView) {
-//        bannerView.translatesAutoresizingMaskIntoConstraints = false
-//        view.addSubview(bannerView)
-//        view.addConstraints[NSLayoutConstraint(item:bannerView,
-//                                               attriute: .bottom,
-//                                               relatedBy: .equal,
-//                                               toItem: view.safeAreaLayoutGuide,
-//                                               attribute: .bottom,
-//                                               multiplier: 1,
-//                                               constant:0),
-//                                               NSLayoutConstraint(item:barnnerView,
-//                                                                  attribute: .centerX,
-//                                                                  relatedBy: .equal,
-//                                                                  toItem: view,
-//                                                                  attribute: .centerX,
-//                                                                  multiplier: 1,
-//                                                                  constant:0)
-//                                              ])
-//    }
-   
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        view.addConstraints(
+            [NSLayoutConstraint(item: bannerView,
+                                attribute: .bottom,
+                                relatedBy: .equal,
+                                toItem: view.safeAreaLayoutGuide,
+                                attribute: .bottom,
+                                multiplier: 1,
+                                constant:0),
+             NSLayoutConstraint(item: bannerView,
+                                attribute: .centerX,
+                                relatedBy: .equal,
+                                toItem: view,
+                                attribute: .centerX,
+                                multiplier: 1,
+                                constant:0)
+            ])
     }
-    */
-
+    
+    
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
