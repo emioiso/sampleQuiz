@@ -28,7 +28,7 @@ class quizViewController: UIViewController {
         super.viewDidLoad()
         
         bannerView = GADBannerView(adSize: GADAdSizeBanner)
-        bannerView.adUnitID = "ca-app-pub-3940256899942544/2936735716"
+        bannerView.adUnitID = "ca-app-pub-7923877881339580/8628351949"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         addBannerViewToView(bannerView)
