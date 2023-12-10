@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		851932812B186C8E008B6886 /* launchImageView.png in Resources */ = {isa = PBXBuildFile; fileRef = 851932802B186C8E008B6886 /* launchImageView.png */; };
-		856CC2D72B256D730064D83A /* privacyPolicy.md in Resources */ = {isa = PBXBuildFile; fileRef = 856CC2D62B256D730064D83A /* privacyPolicy.md */; };
 		85970CF32B03DDA900F35D3C /* .gitignore.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85970CF22B03DDA900F35D3C /* .gitignore.xib */; };
 		85A01B262B06001500459E0F /* correct.png in Resources */ = {isa = PBXBuildFile; fileRef = 85A01B242B06001500459E0F /* correct.png */; };
 		85A01B272B06001500459E0F /* incorrect.png in Resources */ = {isa = PBXBuildFile; fileRef = 85A01B252B06001500459E0F /* incorrect.png */; };
+		85A426FC2B258F4A00324CC2 /* PrivacyPolicy.md in Resources */ = {isa = PBXBuildFile; fileRef = 85A426FB2B258F4A00324CC2 /* PrivacyPolicy.md */; };
 		85BA12862AFCB7240016581E /* quiz1.csv in Resources */ = {isa = PBXBuildFile; fileRef = 85BA12852AFCB7240016581E /* quiz1.csv */; };
 		85CA1F612AFA3F270009CDF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CA1F602AFA3F270009CDF1 /* AppDelegate.swift */; };
 		85CA1F632AFA3F270009CDF1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CA1F622AFA3F270009CDF1 /* SceneDelegate.swift */; };
@@ -29,10 +29,10 @@
 
 /* Begin PBXFileReference section */
 		851932802B186C8E008B6886 /* launchImageView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchImageView.png; sourceTree = "<group>"; };
-		856CC2D62B256D730064D83A /* privacyPolicy.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = privacyPolicy.md; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.documentation.markup; };
 		85970CF22B03DDA900F35D3C /* .gitignore.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = .gitignore.xib; sourceTree = "<group>"; };
 		85A01B242B06001500459E0F /* correct.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = correct.png; sourceTree = "<group>"; };
 		85A01B252B06001500459E0F /* incorrect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = incorrect.png; sourceTree = "<group>"; };
+		85A426FB2B258F4A00324CC2 /* PrivacyPolicy.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = PrivacyPolicy.md; sourceTree = "<group>"; };
 		85BA12852AFCB7240016581E /* quiz1.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = quiz1.csv; sourceTree = "<group>"; };
 		85CA1F5D2AFA3F270009CDF1 /* sampleQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sampleQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85CA1F602AFA3F270009CDF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +93,7 @@
 		85CA1F542AFA3F270009CDF1 = {
 			isa = PBXGroup;
 			children = (
+				85A426FB2B258F4A00324CC2 /* PrivacyPolicy.md */,
 				85970CF22B03DDA900F35D3C /* .gitignore.xib */,
 				85CA1F5F2AFA3F270009CDF1 /* sampleQuiz */,
 				85CA1F5E2AFA3F270009CDF1 /* Products */,
@@ -127,7 +128,6 @@
 				85CA1F6E2AFA3F280009CDF1 /* Info.plist */,
 				851932802B186C8E008B6886 /* launchImageView.png */,
 				85A01B232B06001500459E0F /* image */,
-				856CC2D62B256D730064D83A /* privacyPolicy.md */,
 			);
 			path = sampleQuiz;
 			sourceTree = "<group>";
@@ -193,13 +193,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				85CA1F6D2AFA3F280009CDF1 /* LaunchScreen.storyboard in Resources */,
+				85A426FC2B258F4A00324CC2 /* PrivacyPolicy.md in Resources */,
 				851932812B186C8E008B6886 /* launchImageView.png in Resources */,
 				85CA1F6A2AFA3F280009CDF1 /* Assets.xcassets in Resources */,
 				85A01B262B06001500459E0F /* correct.png in Resources */,
 				85CA1F682AFA3F270009CDF1 /* Main.storyboard in Resources */,
 				85BA12862AFCB7240016581E /* quiz1.csv in Resources */,
 				85F873C82B0B9986000565CA /* quiz3.csv in Resources */,
-				856CC2D72B256D730064D83A /* privacyPolicy.md in Resources */,
 				85A01B272B06001500459E0F /* incorrect.png in Resources */,
 				85F873C62B0B994B000565CA /* quiz2.csv in Resources */,
 				85970CF32B03DDA900F35D3C /* .gitignore.xib in Resources */,
